@@ -24,7 +24,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="camarao-alho.html">
+                                    <a href="camarao-alho.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/jardim-cogumelos.jpg" alt="cogumelos"/>   
@@ -45,7 +45,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="camarao-alho.html">
+                                    <a href="camarao-alho.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/camarao-alho.jpg" alt="camaroes"/>   
@@ -66,7 +66,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="camarao-alho.html">
+                                    <a href="camarao-alho.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/salada-grega.jpg" alt="salada"/>   
@@ -87,7 +87,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="camarao-alho.html">
+                                    <a href="camarao-alho.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/brie-geleia.jpg" alt="brie"/>
@@ -119,7 +119,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="picanha-brasileira.html">
+                                    <a href="picanha-brasileira.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/picanha-brasileira.jpg" alt="picanha"/>   
@@ -140,7 +140,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="picanha-brasileira.html">
+                                    <a href="picanha-brasileira.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/costelinha.jpg" alt="costela"/>   
@@ -161,7 +161,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="picanha-brasileira.html">
+                                    <a href="picanha-brasileira.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/salmao-legumes.jpg" alt="salmao"/>   
@@ -182,7 +182,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="picanha-brasileira.html">
+                                    <a href="picanha-brasileira.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/churrasco-misto.jpg" alt="churrasco"/>
@@ -215,7 +215,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="cheesecake-cereja.html">
+                                    <a href="cheesecake-cereja.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/cheesecake-cereja.jpg" alt="cheesecake"/>   
@@ -236,7 +236,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="cheesecake-cereja.html">
+                                    <a href="cheesecake-cereja.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/flan-frutas-vermelhas.jpg" alt="flan"/>   
@@ -257,7 +257,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="cheesecake-cereja.html">
+                                    <a href="cheesecake-cereja.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/petit-gateau.jpg" alt="petit-gateau"/>   
@@ -278,7 +278,7 @@
 
                             <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                                 <div class="cardapio-item">
-                                    <a href="cheesecake-cereja.html">
+                                    <a href="cheesecake-cereja.php">
                                         
                                         <div class="item-image">
                                             <img src="img/cardapio/creme-papaya.jpg" alt="papaya"/>

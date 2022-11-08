@@ -20,10 +20,45 @@
                         contato@restobar.com.br
                     </p>
                 </div>
-                
+                <?php
+                    $dia_semana = date("w");
+                    $agora = strtotime('now');
+                    $inicio_dia = strtotime('today');
+
+                    $hora_atual = $agora - $inicio_dia;
+
+                    if($dia_semana >= 1 && $dia_semana <= 5){
+                        if($hora_atual < 41400){
+                            $texto_atual = '(Fechado Agora)';
+                            $classe_horario = 'horario-fechado';
+                        }
+                        else{
+                            $texto_atual = '(Aberto Agora)';
+                            $classe_horario = 'horario-aberto';
+                        }
+                    }else if($dia_semana == 6){
+                        if($hora_atual < 41400 && $hora_atual > 7200){
+                            $texto_atual = '(Fechado Agora)';
+                            $classe_horario = 'horario-fechado';
+                        }
+                        else{
+                            $texto_atual = '(Aberto Agora)';
+                            $classe_horario = 'horario-aberto';
+                        }
+                    }else if($dia_semana == 7){
+                        if($hora_atual < 41400 && $hora_atual > 64800){
+                            $texto_atual = '(Fechado Agora)';
+                            $classe_horario = 'horario-fechado';
+                        }
+                        else{
+                            $texto_atual = '(Aberto Agora)';
+                            $classe_horario = 'horario-aberto';
+                        }
+                    }
+                ?>
                 <div class="horario small-5 medium-3 small-offset-1 medium-offset-0 columns">
                     <h4 class="footer-section-title">Horários</h4>
-                    <p><span class="horario-aberto">(Aberto Agora)</span><br>
+                    <p><span class="<?php echo $classe_horario ?>"><?php echo $texto_atual ?></span><br>
                     Seg-Sex: 11h30 - 24h00<br>
                     Sábado 11h30 - 02h00<br>
                     Domingo 11h30 - 18h</p>

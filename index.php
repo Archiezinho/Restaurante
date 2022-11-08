@@ -88,7 +88,7 @@
 
                         <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                             <div class="cardapio-item">
-                                <a href="camarao-alho.html">
+                                <a href="camarao-alho.php">
                                     
                                     <div class="cardapio-item-image">
                                         <img src="img/cardapio/camarao-alho.jpg" alt="camarao"/>   
@@ -109,7 +109,7 @@
 
                         <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                             <div class="cardapio-item">
-                                <a href="picanha-brasileira.html">
+                                <a href="picanha-brasileira.php">
                                     
                                     <div class="cardapio-item-image">
                                         <img src="img/cardapio/picanha-brasileira.jpg" alt="barbecue"/>   
@@ -130,7 +130,7 @@
 
                         <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                             <div class="cardapio-item">
-                                <a href="cheesecake-cereja.html">
+                                <a href="cheesecake-cereja.php">
                                     
                                     <div class="cardapio-item-image">
                                         <img src="img/cardapio/cheesecake-cereja.jpg" alt="cheesecake"/>   
@@ -151,7 +151,7 @@
 
                         <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                             <div class="cardapio-item">
-                                <a href="salmao-legumes.html">
+                                <a href="salmao-legumes.php">
                                     
                                     <div class="cardapio-item-image">
                                         <img src="img/cardapio/salmao-legumes.jpg" alt="salmao"/>   

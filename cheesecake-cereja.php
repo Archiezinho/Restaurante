@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="go-back small-12 columns no-padding">
-                    <a href="cardapio.html"><< Voltar ao Cardápio</a>
+                    <a href="cardapio.php"><< Voltar ao Cardápio</a>
                 </div>
 
             </div>
