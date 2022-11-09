@@ -4,7 +4,7 @@ require_once '../classes/conexão.php';
 require_once '../classes/pratos.php';
 
 if (isset($_POST['nome'])){
-    $id = $_POST['id']: "";
+    $id = $_POST['id'];
     $codigo = $_POST['codigo'];
     $nome = $_POST['nome'];
     $categoria = $_POST['categoria'];

@@ -1,14 +1,14 @@
 <?php
-
-$host = 'mysql:host=localhost;dbname=restaurante';
-$user = 'root';
-$senha = '';
-
-try{
-    $conexao = new PDO($host,$user,$senha);
+abstract class conexao{
+    
+    protected function conectaDB(){
+        try{
+            $conexao = new PDO('mysql:host=localhost;dbname=restaurante','root','');
+            return $conexao;
+        }
+        catch(PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }
-catch(PDOException $e) {
-    print_r($e);
-}
-
 ?>
