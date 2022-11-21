@@ -3,7 +3,12 @@ session_start();
 require_once '../classes/conexao.php';
 require_once '../classes/pratos.php';
 
+<<<<<<< HEAD
 if (isset($_POST['nprato'])){
+=======
+if (isset($_POST['nome'])){
+    $id = $_POST['id'];
+>>>>>>> 9819bb93eb6deb7edd97975ddf36fd7446eeb7d7
     $codigo = $_POST['codigo'];
     $nome = $_POST['nprato'];
     $categoria = $_POST['categoria'];
