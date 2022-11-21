@@ -3,12 +3,8 @@ session_start();
 require_once '../classes/conexao.php';
 require_once '../classes/pratos.php';
 
-<<<<<<< HEAD
 if (isset($_POST['nprato'])){
-=======
-if (isset($_POST['nome'])){
-    $id = $_POST['id'];
->>>>>>> 9819bb93eb6deb7edd97975ddf36fd7446eeb7d7
+    $id = $_POST['id'] . "";
     $codigo = $_POST['codigo'];
     $nome = $_POST['nprato'];
     $categoria = $_POST['categoria'];
@@ -28,7 +24,7 @@ if (isset($_POST['nome'])){
         echo 'Erro, o arquivo não atende os requisitos';
     }
 
-    $A = new pratos($codigo, $nome, $categoria, $descricao, $preco, $caloria, $destaque);
+    $A = new pratos($id, $codigo, $nome, $categoria, $descricao, $preco, $caloria, $destaque);
 }
 
 
