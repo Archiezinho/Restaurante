@@ -21,10 +21,10 @@ $alterar = isset ($_POST['alterar']) ? $_POST['alterar'] : "";
 $salvar = isset ($_POST['salvar']) ? $_POST['salvar'] : "";
 
 if($delete){
-$A->deletar($conexao,$cod);
+    $A->deletar($conexao,$id);
 }
 if($alterar){
-    $A->alterar($conexao,$cod);
+    $A->alterar($conexao,$id);
 }
 if($salvar){
     $A->insere($conexao);

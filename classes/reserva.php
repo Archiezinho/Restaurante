@@ -10,70 +10,73 @@ class reserva{
     private $numeroPessoas
 
     function __construct($id,$nome,$telefone,$email,$data,$mensagem,$numeroPessoas){
-        this->id = $id;
-        this->nome = $nome;
-        this->telefone = $telefone;
-        this->email = $email;
-        this->data = $data;
-        this->mensagem = $mensagem;
-        this->numeroPessoas = $numeroPessoas;
+        $this->id = $id;
+        $this->nome = $nome;
+        $this->telefone = $telefone;
+        $this->email = $email;
+        $this->data = $data;
+        $this->mensagem = $mensagem;
+        $this->numeroPessoas = $numeroPessoas;
     }
     function setId($id){
-        this->id = $id;
+        $this->id = $id;
     }
     function setNome($nome){
-        this->nome = $nome;
+        $this->nome = $nome;
     }
     function setTelefone($telefone){
-        this->telefone = $telefone;
+        $this->telefone = $telefone;
     }
     function setEmail($email){
-        this->email = $email;
+        $this->email = $email;
     }
     function setData($data){
-        this->data = $data;
+        $this->data = $data;
     }
     function setMensagem($mensagem){
-        this->mensagem = $mensagem;
+        $this->mensagem = $mensagem;
     }
     function setNumeroPessoas($numeroPessoas){
-        this->numeroPessoas = $numeroPessoas;
+        $this->numeroPessoas = $numeroPessoas;
     }
     function getId(){
-        return this->id;
+        return $this->id;
     }
     function getNome(){
-        return this->nome;
+        return $this->nome;
     }
     function getTelefone(){
-        return this->telefone;
+        return $this->telefone;
     }
     function getEmail(){
-        return this->email;
+        return $this->email;
     }
     function getData(){
-        return this->data;
+        return $this->data;
     }
     function getMensagem(){
-        return this->mensagem;
+        return $this->mensagem;
     }
     function getNumeroPessoas(){
-        return this->numeroPessoas;
+        return $this->numeroPessoas;
     }
 
     function insere($conexao){
         $query = "insert into reserva values('$this->nome','$this->telefone','$this->email','$this->data','$this->mensagem','$this->numeroPessoas')";
         $conexao->query($query);
+        $conexao->close();
     }
     function alterar($conexao, $id){
         $query = "update reserva set nome='$this->nome' and telefone='$this->telefone' and email='$this->email' and data='$this->data' and mensagem='$this->mensagem' and numeroPessoas='$this->numeroPessoas' where id='$id'";
-        $stmt=$conexao->query($query);
-        $stmt->execute();
+        $conexao->query($query);
+        $conexao->execute();
+        $conexao->close();
     }
     function deletar($conexao, $id){
         $query = "delete from reserva where id='$id'";
-        $stmt=$conexao->query($query);
-        $stmt->execute();
+        $conexao->query($query);
+        $conexao->execute();
+        $conexao->close();
     }
 }
 

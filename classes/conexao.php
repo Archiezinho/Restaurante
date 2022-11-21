@@ -1,14 +1,10 @@
 <?php
 
-$host = 'mysql:host=localhost;dbname=restaurante';
-$user = 'root';
-$senha = '';
+define('HOST','localhost');
+define('USUARIO','root');
+define('SENHA','');
+define('DB','db_restaurante');
 
-try{
-    $conexao = new PDO($host,$user,$senha);
-}
-catch(PDOException $e) {
-    print_r($e);
-}
+$conexao = mysqli_connect(HOST,USUARIO,SENHA,DB) or die ('Não foi possível se conectar');
 
 ?>

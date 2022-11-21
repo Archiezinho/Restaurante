@@ -1,31 +1,41 @@
 <?php
 session_start();
-require_once '../classes/conexão.php';
+require_once '../classes/conexao.php';
 require_once '../classes/pratos.php';
 
-if (isset($_POST['nome'])){
-    $id = $_POST['id']: "";
+if (isset($_POST['nprato'])){
     $codigo = $_POST['codigo'];
-    $nome = $_POST['nome'];
+    $nome = $_POST['nprato'];
     $categoria = $_POST['categoria'];
     $descricao = $_POST['descricao'];
     $preco = $_POST['preco'];
     $caloria = $_POST['caloria'];
     $destaque = $_POST['destaque'];
+    $imagem = $_FILES['imagem'];
 
-    $A = new prato($id, $codigo, $nome, $categoria, $descricao, $preco, $caloria, $destaque);
+    $dir = '../img/cardapio/';
+
+    $imagem['name'] = $codigo.'.jpg';
+
+    if(move_uploaded_file($imagem['tmp_name'], "$dir".$imagem['name'])){
+        echo 'Arquivo enviado com sucesso';
+    }else{
+        echo 'Erro, o arquivo não atende os requisitos';
+    }
+
+    $A = new pratos($codigo, $nome, $categoria, $descricao, $preco, $caloria, $destaque);
 }
 
 
 $delete = isset ($_POST['deletar']) ? $_POST['deletar'] : "";
 $alterar = isset ($_POST['alterar']) ? $_POST['alterar'] : "";
-$salvar = isset ($_POST['salvar']) ? $_POST['salvar'] : "";
+$salvar = isset ($_POST['btnSend']) ? $_POST['btnSend'] : "";
 
 if($delete){
-$A->deletar($conexao,$cod);
+    $A->deletar($conexao,$id);
 }
 if($alterar){
-    $A->alterar($conexao,$cod);
+    $A->alterar($conexao,$id);
 }
 if($salvar){
     $A->insere($conexao);
