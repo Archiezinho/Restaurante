@@ -4,7 +4,7 @@ require_once '../classes/conexao.php';
 require_once '../classes/pratos.php';
 
 
-if (isset($_POST['nome'])){
+if (isset($_POST['nprato'])){
     $id = 1;
     if (isset($_POST['id'])){
         $id = $_POST['id'];

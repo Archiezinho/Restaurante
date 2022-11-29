@@ -62,21 +62,18 @@ class reserva{
     }
 
     function insere($conexao){
-        $query = "insert into tb_reserva values('$this->nome','$this->telefone','$this->email','$this->data','$this->mensagem','$this->numeroPessoas')";
+        $query = "INSERT INTO tb_reserva VALUES('$this->nome','$this->telefone','$this->email','$this->data','$this->mensagem','$this->numeroPessoas')";
         $conexao->query($query);
-        $conexao->close();
     }
     function alterar($conexao, $id){
-        $query = "update tb_reserva set nome='$this->nome' and telefone='$this->telefone' and email='$this->email' and data='$this->data' and mensagem='$this->mensagem' and numeroPessoas='$this->numeroPessoas' where id='$id'";
+        $query = "UPDATE tb_reserva SET nome='$this->nome' AND telefone='$this->telefone' AND email='$this->email' AND data='$this->data' AND mensagem='$this->mensagem' AND numeroPessoas='$this->numeroPessoas' WHERE id='$id'";
         $conexao->query($query);
         $conexao->execute();
-        $conexao->close();
     }
     function deletar($conexao, $id){
-        $query = "delete from tb_reserva where id='$id'";
+        $query = "DELETE FROM tb_reserva WHERE id='$id'";
         $conexao->query($query);
         $conexao->execute();
-        $conexao->close();
     }
 }
 

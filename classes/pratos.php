@@ -70,21 +70,18 @@ class pratos{
     }
 
     function insere($conexao){
-        $query = "insert into tb_pratos values('$this->codigo','$this->nome','$this->categoria','$this->descricao','$this->preco','$this->caloria','$this->destaque')";
+        $query = "INSERT INTO tb_pratos VALUES('$this->codigo','$this->nome','$this->categoria','$this->descricao','$this->preco','$this->caloria','$this->destaque')";
         $conexao->query($query);
-        $conexao->close();
     }
     function alterar($conexao, $id){
-        $query = "update tb_pratos set codigo='$this->codigo' and nome='$this->nome' and categoria='$this->categoria' and descricao='$this->descricao' and preco='$this->preco' and caloria='$this->caloria' and destaque='$this->destaque' where id='$id'";
+        $query = "UPDATE tb_pratos SET codigo='$this->codigo' AND nome='$this->nome' AND categoria='$this->categoria' AND descricao='$this->descricao' AND preco='$this->preco' AND caloria='$this->caloria' AND destaque='$this->destaque' WHERE id='$id'";
         $conexao->query($query);
         $conexao->execute();
-        $conexao->close();
     }
     function deletar($conexao, $id){
-        $query = "delete from tb_pratos where id='$id'";
+        $query = "DELETE FROM tb_pratos WHERE id='$id'";
         $conexao->query($query);
         $conexao->execute();
-        $conexao->close();
     }
 }
 
