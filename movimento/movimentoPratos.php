@@ -6,7 +6,7 @@ require_once '../classes/pratos.php';
 
 if (isset($_POST['nome'])){
     $id = 1;
-    if (isset($_POST['nome'])){
+    if (isset($_POST['id'])){
         $id = $_POST['id'];
     }
     $codigo = $_POST['codigo'];

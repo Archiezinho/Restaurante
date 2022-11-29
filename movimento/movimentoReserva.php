@@ -4,7 +4,10 @@ require_once '../classes/conexão.php';
 require_once '../classes/reserva.php';
 
 if (isset($_POST['nome'])){
-    $id = $_POST['id'];
+    $id = 1;
+    if (isset($_POST['id'])){
+        $id = $_POST['id'];
+    }
     $nome = $_POST['nome'];
     $telefone = $_POST['telefone'];
     $email = $_POST['email'];
