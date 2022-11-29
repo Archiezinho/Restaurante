@@ -1,5 +1,5 @@
 <?php
 
-$conexao = new PDO('mysql:host=localhost;dbname=restaurante','root','');
+$conexao = new PDO('mysql:host=localhost;dbname=db_restaurante','root','');
 
 ?>
