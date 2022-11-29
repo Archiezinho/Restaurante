@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 define('HOST','localhost');
 define('USUARIO','root');
@@ -8,7 +7,7 @@ define('DB','db_restaurante');
 
 $conexao = mysqli_connect(HOST,USUARIO,SENHA,DB) or die ('Não foi possível se conectar');
 
-=======
+
 abstract class conexao{
     
     protected function conectaDB(){
@@ -21,5 +20,4 @@ abstract class conexao{
         }
     }
 }
->>>>>>> 9819bb93eb6deb7edd97975ddf36fd7446eeb7d7
 ?>
