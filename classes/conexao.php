@@ -8,6 +8,7 @@ define('DB','db_restaurante');
 $conexao = mysqli_connect(HOST,USUARIO,SENHA,DB) or die ('Não foi possível se conectar');
 
 
+
 abstract class conexao{
     
     protected function conectaDB(){

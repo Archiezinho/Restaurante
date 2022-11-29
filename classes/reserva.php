@@ -7,9 +7,9 @@ class reserva{
     private $email;
     private $data;
     private $mensagem;
-    private $numeroPessoas
+    private $numeroPessoas;
 
-    function __construct($id,$nome,$telefone,$email,$data,$mensagem,$numeroPessoas){
+    function __construct($id, $nome, $telefone, $email, $data, $mensagem, $numeroPessoas){
         $this->id = $id;
         $this->nome = $nome;
         $this->telefone = $telefone;
@@ -62,18 +62,18 @@ class reserva{
     }
 
     function insere($conexao){
-        $query = "insert into reserva values('$this->nome','$this->telefone','$this->email','$this->data','$this->mensagem','$this->numeroPessoas')";
+        $query = "insert into tb_reserva values('$this->nome','$this->telefone','$this->email','$this->data','$this->mensagem','$this->numeroPessoas')";
         $conexao->query($query);
         $conexao->close();
     }
     function alterar($conexao, $id){
-        $query = "update reserva set nome='$this->nome' and telefone='$this->telefone' and email='$this->email' and data='$this->data' and mensagem='$this->mensagem' and numeroPessoas='$this->numeroPessoas' where id='$id'";
+        $query = "update tb_reserva set nome='$this->nome' and telefone='$this->telefone' and email='$this->email' and data='$this->data' and mensagem='$this->mensagem' and numeroPessoas='$this->numeroPessoas' where id='$id'";
         $conexao->query($query);
         $conexao->execute();
         $conexao->close();
     }
     function deletar($conexao, $id){
-        $query = "delete from reserva where id='$id'";
+        $query = "delete from tb_reserva where id='$id'";
         $conexao->query($query);
         $conexao->execute();
         $conexao->close();

@@ -10,7 +10,8 @@ class pratos{
     private $caloria;
     private $destaque;
 
-    function __construct( $codigo, $nome, $categoria, $descricao, $preco, $caloria, $destaque){
+    function __construct($id, $codigo, $nome, $categoria, $descricao, $preco, $caloria, $destaque){
+        $this->id = $id;
         $this->codigo = $codigo;
         $this->nome = $nome;
         $this->categoria = $categoria;
@@ -74,13 +75,13 @@ class pratos{
         $conexao->close();
     }
     function alterar($conexao, $id){
-        $query = "update pratos set codigo='$this->codigo' and nome='$this->nome' and categoria='$this->categoria' and descricao='$this->descricao' and preco='$this->preco' and caloria='$this->caloria' and destaque='$this->destaque' where id='$id'";
+        $query = "update tb_pratos set codigo='$this->codigo' and nome='$this->nome' and categoria='$this->categoria' and descricao='$this->descricao' and preco='$this->preco' and caloria='$this->caloria' and destaque='$this->destaque' where id='$id'";
         $conexao->query($query);
         $conexao->execute();
         $conexao->close();
     }
     function deletar($conexao, $id){
-        $query = "delete from pratos where id='$id'";
+        $query = "delete from tb_pratos where id='$id'";
         $conexao->query($query);
         $conexao->execute();
         $conexao->close();
