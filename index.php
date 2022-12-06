@@ -1,5 +1,6 @@
 <?php
     include('includes/header.php');
+    include('classes/conexao.php');
 ?>
 		<div class="ghost-element">
 		</div>
@@ -86,18 +87,26 @@
                 <div class="slider-cardapio">
                     <div class="slider-002 small-12 small-centered columns">
 
+                    <?php
+                    $sql = "SELECT * FROM tb_pratos WHERE destaque = 1"
+                    $result = $conexão->query($sql);
+
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()) {
+                    ?>
+
                         <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
                             <div class="cardapio-item">
-                                <a href="camarao-alho.php">
+                                <a href="prato.php?prato=<?php echo $row['codigo']?>">
                                     
                                     <div class="cardapio-item-image">
-                                        <img src="img/cardapio/camarao-alho.jpg" alt="camarao"/>   
+                                        <img src="img/cardapio/<?php echo $row['codigo']?>.jpg" alt="<?php echo $row['nome']?>"/>   
                                     </div>
 
                                     <div class="item-info">
                                         
                                     
-                                        <div class="title">Camarão ao Alho</div>
+                                        <div class="title"><?php echo $row['nome']?></div>
                                     </div>
 
                                     <div class="gradient-filter">
@@ -106,70 +115,12 @@
                                 </a>
                             </div>
                         </div>
-
-                        <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
-                            <div class="cardapio-item">
-                                <a href="picanha-brasileira.php">
-                                    
-                                    <div class="cardapio-item-image">
-                                        <img src="img/cardapio/picanha-brasileira.jpg" alt="barbecue"/>   
-                                    </div>
-
-                                    <div class="item-info">
-                                        
-                                    
-                                        <div class="title">Picanha à Brasileira</div>
-                                    </div>
-
-                                    <div class="gradient-filter">
-                                    </div>
-                                    
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
-                            <div class="cardapio-item">
-                                <a href="cheesecake-cereja.php">
-                                    
-                                    <div class="cardapio-item-image">
-                                        <img src="img/cardapio/cheesecake-cereja.jpg" alt="cheesecake"/>   
-                                    </div>
-
-                                    <div class="item-info">
-                                        
-                                    
-                                        <div class="title">Cheesecake de cereja</div>
-                                    </div>
-
-                                    <div class="gradient-filter">
-                                    </div>
-                                    
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="cardapio-item-outer bounce-hover small-10 medium-4 columns"> 
-                            <div class="cardapio-item">
-                                <a href="salmao-legumes.php">
-                                    
-                                    <div class="cardapio-item-image">
-                                        <img src="img/cardapio/salmao-legumes.jpg" alt="salmao"/>   
-                                    </div>
-
-                                    <div class="item-info">
-                                        
-                                    
-                                        <div class="title">Salmão aos Legumes</div>
-                                    </div>
-
-                                    <div class="gradient-filter">
-                                    </div>
-                                    
-                                </a>
-                            </div>
-                        </div>
-
+                    <?php
+                    }
+                }else{
+                    'não há destaques';
+                }
+                    ?>
                        
                 
                     </div>
